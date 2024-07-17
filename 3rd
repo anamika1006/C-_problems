@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Problem3
+{
+    class Problem3
+    {
+        static void Main(string[] args)
+        {
+            int x, y,radius;
+            int radius_square, coordinates_calculation;
+            Console.WriteLine("Enter X coordinates of circle:");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Y coordinates of circle:");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Radius of circle:");
+            radius = Convert.ToInt32(Console.ReadLine());
+            radius_square = radius * radius;
+            coordinates_calculation = (x * x) + (y * y);
+            if (coordinates_calculation == radius_square)
+            {
+                Console.WriteLine("Points Lies On The Circle");
+            }
+            if (coordinates_calculation> radius_square )
+            {
+                Console.WriteLine("Points Lies OutSide The Circle");
+            }
+            if(coordinates_calculation <radius_square )
+            {
+                Console.WriteLine("Points Lies InSide The Circle");
+            }
+            Console.ReadKey();
+        }
+    }
+}
